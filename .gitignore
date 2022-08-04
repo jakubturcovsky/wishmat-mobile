@@ -1,0 +1,60 @@
+.gradle
+/local.properties
+/captures
+.cxx
+
+# Build folders
+/build
+/buildSrc/build
+.externalNativeBuild
+
+# IDEA
+*.iml
+.idea/*
+!.idea/.gitignore
+!.idea/codeStyles
+!.idea/codeStyles/*
+!.idea/inspectionProfiles
+!.idea/inspectionProfiles/*
+
+# Mac OS
+## General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+## Icon must end with two
+Icon
+
+## Thumbnails
+._*
+
+## Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+## Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Xcode
+*.xcuserstate
+*.xcbkptlist
+
+# SPM
+shared/.swiftpm/xcode/xcuserdata/*
+
+# Tuist derived files
+graph.dot
+Derived/
+.sdkmanrc
+.fastlane/report.xml
+
