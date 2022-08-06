@@ -1,20 +1,19 @@
 package com.wishmat.android
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.wishmat.Greeting
-import android.widget.TextView
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import com.wishmat.android.ui.MainScreen
+import com.wishmat.android.ui.theme.AppTheme
 
-fun greet(): String {
-    return Greeting().greeting()
-}
+class MainActivity : ComponentActivity() {
 
-class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        val tv: TextView = findViewById(R.id.text_view)
-        tv.text = greet()
+        setContent {
+            AppTheme {
+                MainScreen()
+            }
+        }
     }
 }
