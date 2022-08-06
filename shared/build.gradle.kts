@@ -52,7 +52,11 @@ kotlin {
         }
 
         val androidMain by getting
-        val androidTest by getting
+        val androidTest by getting {
+            dependencies {
+                implementation(libs.bundles.shared.androidTest)
+            }
+        }
 
         val iosMain by getting {
             dependsOn(commonMain)

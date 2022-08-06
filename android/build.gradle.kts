@@ -34,6 +34,10 @@ android {
 
 dependencies {
     implementation(project(":shared"))
+    implementation(libs.bundles.android.compose)
+    implementation(libs.bundles.androidx)
+
+    debugImplementation(libs.compose.tooling)
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.0")
