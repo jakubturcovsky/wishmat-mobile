@@ -1,4 +1,4 @@
-package com.wishmat
+package com.wishmat.shared
 
 import kotlin.test.Test
 import kotlin.test.assertTrue

@@ -51,7 +51,11 @@ kotlin {
             }
         }
 
-        val androidMain by getting
+        val androidMain by getting {
+            dependencies {
+                implementation(libs.androidx.lifecycle.viewmodel)
+            }
+        }
         val androidTest by getting {
             dependencies {
                 implementation(libs.bundles.shared.androidTest)
