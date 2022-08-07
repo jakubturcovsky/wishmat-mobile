@@ -9,5 +9,4 @@ class HomeScreenInteractor(
     override val savedStateHandle: SavedStateHandle? = null,
 ) : ScreenInteractor<HomeViewModel> {
 
-
 }

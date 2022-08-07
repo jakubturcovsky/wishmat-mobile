@@ -1,7 +1,10 @@
 package com.wishmat.android.ui
 
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.*
+import androidx.compose.material.BottomNavigation
+import androidx.compose.material.BottomNavigationItem
+import androidx.compose.material.Icon
+import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -18,18 +21,16 @@ import com.wishmat.shared.domain.WishlistName
 @Composable
 fun MainScreen() {
     val navController = rememberNavController()
+    val currentBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentDestination = currentBackStackEntry?.destination
+
     val wishlistName = WishlistName("")
     val tabs = remember {
         listOf(AppScreen.Home, AppScreen.AddWish, AppScreen.Settings)
     }
 
-    val navBackStackEntry by navController.currentBackStackEntryAsState()
-    val currentDestination = navBackStackEntry?.destination
-
     Scaffold(
-        topBar = {
-             WishlistDetailToolbar(wishlistName = wishlistName, navController = navController)
-        },
+        topBar = { WishlistDetailToolbar(wishlistName = wishlistName, navController = navController, showUpButton = false) },
         bottomBar = {
             BottomNavigation {
                 tabs.forEach { tab ->
@@ -48,7 +49,6 @@ fun MainScreen() {
                                 restoreState = true
                             }
                         },
-                        enabled = tab == AppScreen.Home,
                     )
                 }
             }
@@ -59,7 +59,6 @@ fun MainScreen() {
             navController = navController,
         )
     }
-    Text(text = "Hi mom!")
 }
 
 @Preview

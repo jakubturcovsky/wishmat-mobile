@@ -6,7 +6,9 @@ import android.content.SharedPreferences
 import android.util.Log
 import com.wishmat.shared.AppInfo
 import com.wishmat.shared.di.initKoin
+import com.wishmat.shared.viewmodel.AddWishViewModel
 import com.wishmat.shared.viewmodel.HomeViewModel
+import com.wishmat.shared.viewmodel.SettingsViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -29,6 +31,8 @@ class App : Application() {
                 single { { Log.i("Startup", "Hello from Android/Kotlin!") } }
 
                 viewModel { HomeViewModel() }
+                viewModel { SettingsViewModel() }
+                viewModel { AddWishViewModel() }
             }
         )
     }

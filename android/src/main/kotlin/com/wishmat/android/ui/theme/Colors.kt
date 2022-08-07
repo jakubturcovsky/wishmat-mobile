@@ -4,9 +4,13 @@ import androidx.compose.ui.graphics.Color
 
 object Colors {
 
-    val Yellow = Color(0xfffcd33a)
-    val YellowVariant = Color(0xffebc931)
-    val YellowBackground = Color(0xfffedb37)
-    val Purple = Color(0xff683cb7)
+    val Green = Color(0xFF4CAF50)
+    val DarkGreen = Color(0xFF388E3C)
+    val LightGreen = Color(0xFFC8E6C9)
+    val Brown = Color(0xFF795548)
+    val DarkBrown = Color(0xFF6D4C41)
+    val Text = Color(0xFF212121)
+    val SecondaryText = Color(0xFF757575)
+    val Divider = Color(0xFFBDBDBD)
     val Error = Color(0xffd32f2f)
 }
