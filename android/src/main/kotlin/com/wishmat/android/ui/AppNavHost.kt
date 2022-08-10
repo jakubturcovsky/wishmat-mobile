@@ -5,12 +5,11 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.wishmat.android.ui.addwish.AddWishRoute
-import com.wishmat.android.ui.addwish.AddWishScreenNavigator
-import com.wishmat.android.ui.home.HomeRoute
-import com.wishmat.android.ui.home.HomeScreenNavigator
-import com.wishmat.android.ui.settings.SettingsRoute
-import com.wishmat.android.ui.settings.SettingsScreenNavigator
+import com.wishmat.android.ui.addwish.AddWishScreen
+import com.wishmat.android.ui.home.HomeScreen
+import com.wishmat.android.ui.settings.SettingsScreen
+import com.wishmat.shared.viewmodel.HomeViewModel
+import org.koin.androidx.compose.viewModel
 
 @Composable
 fun AppNavHost(
@@ -19,17 +18,18 @@ fun AppNavHost(
 ) {
     NavHost(
         navController = navController,
-        startDestination = AppScreen.Home.route,
+        startDestination = AppScreen.AddWish.route,
         modifier = modifier
     ) {
         composable(AppScreen.Home.route) {
-            HomeRoute(navigator = HomeScreenNavigator(navController))
+            val viewModel: HomeViewModel by viewModel()
+            HomeScreen(viewModel)
         }
         composable(AppScreen.Settings.route) {
-            SettingsRoute(navigator = SettingsScreenNavigator(navController))
+            SettingsScreen()
         }
         composable(AppScreen.AddWish.route) {
-            AddWishRoute(navigator = AddWishScreenNavigator(navController))
+            AddWishScreen()
         }
     }
 }
