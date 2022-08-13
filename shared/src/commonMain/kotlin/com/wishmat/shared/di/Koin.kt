@@ -4,6 +4,10 @@ import co.touchlab.kermit.Logger
 import co.touchlab.kermit.StaticConfig
 import co.touchlab.kermit.platformLogWriter
 import com.wishmat.shared.AppInfo
+import com.wishmat.shared.domain.DefaultWishService
+import com.wishmat.shared.domain.WishRepository
+import com.wishmat.shared.domain.WishService
+import com.wishmat.shared.infrastructure.FakeWishRepository
 import org.koin.core.KoinApplication
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
@@ -34,6 +38,10 @@ fun initKoin(appModule: Module): KoinApplication {
 private val coreModule = module {
     val baseLogger = Logger(config = StaticConfig(logWriterList = listOf(platformLogWriter())), "KampKit")
     factory { (tag: String?) -> if (tag != null) baseLogger.withTag(tag) else baseLogger }
+
+    single<WishRepository> { FakeWishRepository() }
+
+    single<WishService> { DefaultWishService(get()) }
 }
 
 internal inline fun <reified T> Scope.getWith(vararg params: Any?): T {

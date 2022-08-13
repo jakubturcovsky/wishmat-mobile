@@ -18,6 +18,7 @@ data class Wish(
     @JvmInline
     value class Name(val value: String = "")
 
+    @Serializable
     @JvmInline
     value class Description(val value: String = "")
 }

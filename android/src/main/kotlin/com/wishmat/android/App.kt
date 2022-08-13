@@ -32,7 +32,7 @@ class App : Application() {
 
                 viewModel { HomeViewModel() }
                 viewModel { SettingsViewModel() }
-                viewModel { AddWishViewModel() }
+                viewModel { AddWishViewModel(get()) }
             }
         )
     }
