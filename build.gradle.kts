@@ -6,6 +6,7 @@ buildscript {
     }
     dependencies {
         classpath(libs.bundles.gradlePlugins)
+        classpath("dev.icerock.moko:resources-generator:0.20.1")
     }
 }
 

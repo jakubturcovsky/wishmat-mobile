@@ -49,8 +49,10 @@ kotlin {
 
         val commonMain by getting {
             dependencies {
+                implementation(project(":shared:resources"))
                 implementation(libs.koin.core)
                 implementation(libs.coroutines.core)
+                implementation(libs.moko.resources)
                 api(libs.touchlab.kermit)
                 implementation(libs.uuid)
                 implementation(libs.kotlin.serialization.json)

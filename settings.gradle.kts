@@ -6,7 +6,7 @@ pluginManagement {
     }
 }
 
-include(":android", ":shared")
+include(":android", ":shared", ":shared:resources")
 rootProject.name = "Wishmat"
 
 enableFeaturePreview("VERSION_CATALOGS")

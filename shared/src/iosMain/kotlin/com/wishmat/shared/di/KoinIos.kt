@@ -2,6 +2,7 @@ package com.wishmat.shared.di
 
 import co.touchlab.kermit.Logger
 import com.wishmat.shared.AppInfo
+import com.wishmat.shared.IosResourceResolver
 import org.koin.core.Koin
 import org.koin.core.KoinApplication
 import org.koin.core.component.KoinComponent
@@ -17,6 +18,7 @@ fun initKoinIos(
     module {
         single { appInfo }
         single { doOnStartup }
+        single { IosResourceResolver() }
     }
 )
 

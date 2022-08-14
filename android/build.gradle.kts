@@ -34,6 +34,7 @@ android {
 
 dependencies {
     implementation(project(":shared"))
+    implementation(project(":shared:resources"))
     implementation(libs.bundles.android.compose)
     implementation(libs.bundles.androidx)
     // TODO: Remove after resolving hiding default ActionBar without using NoActionBar xml theme in manifest

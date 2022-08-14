@@ -79,7 +79,7 @@ fun AddWishScreen(viewModel: AddWishViewModel = getViewModel()) {
                     .padding(top = Dimensions.Padding.default),
                 onClick = viewModel::createWish
             ) {
-                Text(text = "Create")
+                Text(text = viewModel.localizations.create)
             }
         }
     }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="AddWish_Name_Title">Name</string>
+    <string name="AddWish_Name_Placeholder">Rainbow-colored Unicorn</string>
+    <string name="AddWish_Description_Title">Description</string>
+    <string name="AddWish_Description_Placeholder">Full rainbow colors, pointy horn</string>
+    <string name="AddWish_Url_Title">Link</string>
+    <string name="AddWish_Url_Placeholder">https://amazon.com/rainbow-unicorn</string>
+    <string name="AddWish_Name_ValidationError_Empty">Wish name cannot be empty</string>
+    <string name="AddWish_Create">Create</string>
+</resources>
